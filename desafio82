@@ -1,0 +1,39 @@
+inteiros = range(0,99999)
+inteiros_str = [str(num) for num in inteiros]
+nmr = []
+impar = []
+par = []
+continuar = ("sim", "não")
+
+while True:
+    while True:
+        i = (input("Digite um numero de 0 até 99999: "))
+        if i in inteiros_str:
+            i = int(i)
+            if not i in nmr:
+                nmr.append(i)
+                break
+            else:
+                print("Valor já inserido, por favor digite outro numero")
+        else:
+            print("Digite um numero inteiro.")
+    
+    while True:
+        cont = input("Deseja continuar?(sim/não) ").strip().lower()
+        if not cont in continuar:
+            print("Digite corretamente")
+        else:
+            break 
+            
+    if cont == "não":
+         len(nmr)
+         break
+    elif cont == "sim":
+         print("continuando...")
+
+for n in nmr:
+    if n%2 == 0:
+        par.append(n)
+    else:
+        impar.append(n)
+print(nmr, par, impar)
